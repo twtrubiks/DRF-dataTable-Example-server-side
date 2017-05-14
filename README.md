@@ -1,7 +1,7 @@
 # DRF-dataTable-Example-server-side
 DataTables Example (server-side) - Python Django REST framework
 
-* [Youtube Demo]() - 建議看影片的 demo 說明
+* [Youtube Demo](https://youtu.be/E0Pf5Ci-vGw) - 建議看影片的 demo 說明
 
 DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-framework.org/) 簡單範例 📝
 
@@ -27,9 +27,9 @@ DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-f
 
 ## 說明
 
-* LOG 資訊非常重要，可以參考官網 [django logging](https://docs.djangoproject.com/en/1.11/topics/logging/) , 或是看範例裡面的 [settings.py ]()裡面的 LOGGING。
+* LOG 資訊非常重要，可以參考官網 [django logging](https://docs.djangoproject.com/en/1.11/topics/logging/) , 或是看範例裡面的 [settings.py ](https://github.com/twtrubiks/DRF-dataTable-Example-server-side/blob/master/drf_table_ex/settings.py)裡面的 LOGGING。
 
-* 建議透過 [django-db-backends](https://docs.djangoproject.com/en/1.11/topics/logging/#django-db-backends) 來觀看目前的 orm 到底執行了什麼 SQL 指令。
+* 建議透過 [django-db-backends](https://docs.djangoproject.com/en/1.11/topics/logging/#django-db-backends) 來觀看目前的 orm 到底執行了什麼 SQL 指令，可以到範例裡面的 [settings.py ](https://github.com/twtrubiks/DRF-dataTable-Example-server-side/blob/master/drf_table_ex/settings.py) 找 django.db.backends。
 
 
 ## 執行方法
