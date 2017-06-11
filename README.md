@@ -78,6 +78,10 @@ DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-f
 
 * 本範例前後端並沒有分離，而是寫在一起，比較好的方式，應該是前後端分離。
 
+* api document 可參考 [api_document.html](https://github.com/twtrubiks/DRF-dataTable-Example-server-side/blob/master/api_document.html) ，直接用瀏覽器開啟即可。 ( 文件教學可參考  [aglio_tutorial](https://github.com/twtrubiks/aglio_tutorial) )
+
+![](http://i.imgur.com/xOe8qsD.png)
+
 ## 執行環境
 
 * Python 3.4.3
