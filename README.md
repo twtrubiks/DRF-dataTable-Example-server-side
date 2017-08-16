@@ -24,6 +24,15 @@ DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-f
 安裝 [Django-REST-framework](http://www.django-rest-framework.org/)
 >pip install djangorestframework
 
+安裝 [django-model-utils](https://django-model-utils.readthedocs.io/en/latest/index.html)
+>pip install django-model-utils
+
+或是使用 cmd (命令提示字元)
+
+```cmd
+pip install -r requirements.txt
+```
+
 ## 說明
 
 * LOG 資訊非常重要，可以參考官網 [django logging](https://docs.djangoproject.com/en/1.11/topics/logging/) , 或是看範例裡面的  [settings.py](https://github.com/twtrubiks/DRF-dataTable-Example-server-side/blob/master/drf_table_ex/settings.py) 裡面的 LOGGING。
@@ -91,6 +100,7 @@ DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-f
 * [Django REST framework](http://www.django-rest-framework.org/)
 * [DataTables]( https://datatables.net/ )
 * [Bootstrap]( http://getbootstrap.com/ )
+* [django-model-utils](https://django-model-utils.readthedocs.io/en/latest/index.html)
 
 ## License
 
