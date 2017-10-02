@@ -26,7 +26,7 @@ class MusicViewSet(viewsets.ModelViewSet):
             result = dict()
             result['data'] = serializer.data
             result['draw'] = music['draw']
-            result['recordsTotal'] = music['count']
+            result['recordsTotal'] = music['total']
             result['recordsFiltered'] = music['count']
             return Response(result, status=status.HTTP_200_OK, template_name=None, content_type=None)
 

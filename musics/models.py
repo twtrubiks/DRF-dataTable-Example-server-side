@@ -38,18 +38,21 @@ def query_musics_by_args(**kwargs):
     if order == 'desc':
         order_column = '-' + order_column
 
+    queryset = Music.objects.all()
+    total = queryset.count()
+
     if search_value:
-        queryset = Music.objects.filter(Q(id__icontains=search_value) |
+        queryset = queryset.filter(Q(id__icontains=search_value) |
                                         Q(song__icontains=search_value) |
                                         Q(singer__icontains=search_value) |
                                         Q(last_modify_date__icontains=search_value) |
                                         Q(created__icontains=search_value))
-    else:
-        queryset = Music.objects
+
     count = queryset.count()
     queryset = queryset.order_by(order_column)[start:start + length]
     return {
         'items': queryset,
         'count': count,
+        'total': total,
         'draw': draw
     }
