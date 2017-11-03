@@ -11,7 +11,7 @@ DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-f
 * 使用 [Django REST framework](http://www.django-rest-framework.org/) 建立API。
 * 搭配 [DataTables]( https://datatables.net/ ) 並且使用 [server-side]( https://datatables.net/manual/server-side ) 增加使用者體驗。
 * 搭配 Bootstrap 。
-* 搭配 SQLite ( 10萬比模擬資料 )。
+* 搭配 SQLite ( 10萬筆模擬資料 )。
 
 ## 安裝套件
 
@@ -83,7 +83,7 @@ pip install -r requirements.txt
 
 ## 後記
 
-* 從影片中的 demo 可以很明顯的看出當資料量很大（5 萬比）的時候，如果沒有用 server-side 的方式，而是一次全部載入，使用者體驗非常差。
+* 從影片中的 demo 可以很明顯的看出當資料量很大（5 萬筆）的時候，如果沒有用 server-side 的方式，而是一次全部載入，使用者體驗非常差。
 
 * 本範例前後端並沒有分離，而是寫在一起，比較好的方式，應該是前後端分離。
 
