@@ -80,6 +80,21 @@ DATABASES = {
     }
 }
 
+
+# MySQL (5.7)
+# MySQL 8.0 開始，會有 django.db.utils.OperationalError: (2059, ) 的問題
+# 原因是 MySQL 8.0 的密碼加密方式改成了 caching_sha2_password，請自行上網找解法。
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'demo',
+#         'USER': 'root',
+#         'PASSWORD': 'password123',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

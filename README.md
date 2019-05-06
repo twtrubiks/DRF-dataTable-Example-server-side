@@ -19,7 +19,9 @@ DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-f
 
 安裝 [Django](https://github.com/django/django)
 
->pip install django
+這邊請注意，django<2.0 ( django 請安裝小於 2.0 的版本)
+
+>pip install Django==1.11.20
 
 安裝 [Django-REST-framework](http://www.django-rest-framework.org/)
 >pip install djangorestframework
@@ -91,9 +93,56 @@ pip install -r requirements.txt
 
 ![](http://i.imgur.com/xOe8qsD.png)
 
+## 更換 MySQL 資料庫
+
+因為有些人反映換成 MySQL 之後無法 work，所以我測試了一下，
+
+步驟一，先要多安裝兩個套件，
+
+安裝 PyMySQL
+
+```cmd
+pip install PyMySQL
+```
+
+安裝 mysqlclient
+
+```cmd
+pip install mysqlclient
+```
+
+( 這個有可能安裝不起來，我自己最後是去找 mysqlclient-1.4.2-cp36-cp36m-win32.whl 安裝成功 )
+
+[settings.py](https://github.com/twtrubiks/DRF-dataTable-Example-server-side/blob/master/drf_table_ex/settings.py#L84) 要改成
+
+```python
+......
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'demo',
+        'USER': 'root',
+        'PASSWORD': 'password123',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+}
+
+......
+```
+
+也可參考之前的文章 [Django 如何連結 MySQL](https://github.com/twtrubiks/django-transactions-tutorial#django-%E5%A6%82%E4%BD%95%E9%80%A3%E7%B5%90-mysql)，
+
+這邊要特別注意，MySQL 我使用 5.7，如果使用 MySQL 8.0，會遇到 django.db.utils.OperationalError: (2059, )
+
+的問題，原因是 MySQL 8.0 的密碼加密方式改成了 caching_sha2_password，要再自行修改，簡單一點就是使用
+
+MySQL 5.7。
+
 ## 執行環境
 
-* Python 3.4.3
+* Python 3.6.6
 
 ## Reference
 
