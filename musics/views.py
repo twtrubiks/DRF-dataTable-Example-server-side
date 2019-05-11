@@ -1,20 +1,14 @@
-from musics.models import Music
+from django.shortcuts import render
+from musics.models import Music, query_musics_by_args
 from musics.serializers import MusicSerializer
-# Create your views here.
 from rest_framework import viewsets, status
 from rest_framework.response import Response
 
-from django.template.response import TemplateResponse
-from django.http.response import HttpResponse
-from musics.models import query_musics_by_args
 
 
 def index(request):
-    html = TemplateResponse(request, 'index.html')
-    return HttpResponse(html.render())
+    return render( request, 'musics/index.html')
 
-
-# Create your views here.
 class MusicViewSet(viewsets.ModelViewSet):
     queryset = Music.objects.all()
     serializer_class = MusicSerializer
@@ -32,15 +26,3 @@ class MusicViewSet(viewsets.ModelViewSet):
 
         except Exception as e:
             return Response(e, status=status.HTTP_404_NOT_FOUND, template_name=None, content_type=None)
-
-            # [Get] api/music/
-            # def list(self, request, **kwargs):
-            #     try:
-            #         music = Music.objects.all()[0:50000]
-            #         serializer = MusicSerializer(music, many=True)
-            #
-            #         return Response(serializer.data, status=status.HTTP_200_OK, template_name=None, content_type=None)
-            #
-            #     except Exception as e:
-            #         return Response(e.message, status=status.HTTP_404_NOT_FOUND, template_name=None, content_type=None)
-            #

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django-DRF Demo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'musics/stylesheets/bootstrap.min.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'musics/stylesheets/jquery.dataTables.css' %}" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Django-DRF Demo</h1>
+        <p>dataTable Example (server-side)</p>
+    </div>
+
+    <!-- New  button -->
+    <div class="text-center">
+        <button type="button" data-dismiss="modal" class="btn btn-primary" id="new">New</button>
+    </div>
+
+    <!-- datatables -->
+    <table id="datatables" class="table table-hover">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>song</th>
+            <th>singer</th>
+            <th>last_modify_date</th>
+            <th>created</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+
+        </tr>
+        </tfoot>
+    </table>
+
+
+    <!-- NEW and EDIT Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal_title"></h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="song"><span class="glyphicon glyphicon-pencil"></span> Song</label>
+                            <input type="text" class="form-control" id="song" name="song" placeholder="Enter Song"
+                                   required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="singer"><span class="glyphicon glyphicon-file"></span> Singer</label>
+                            <input type="text" class="form-control" id="singer" name="singer"
+                                   placeholder="Enter Singer" required="true">
+                        </div>
+                        <input type="hidden" id="type" name="type" value="">
+                        <button type="submit" class="btn btn-success btn-block"><span
+                                class="glyphicon glyphicon-ok"></span> OK
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="confirm" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Are you sure?</h4>
+                </div>
+                <div class="modal-body">
+                    <button type="button" data-dismiss="modal" class="btn btn-primary" id="delete">Delete</button>
+                    <button type="button" data-dismiss="modal" class="btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'musics/js/jquery.min.js' %}"></script>
+<script src="{% static 'musics/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'musics/js/jquery.dataTables.js' %}"></script>
+<script src="{% static 'musics/js/index.js' %}"></script>
+</body>
+</html>

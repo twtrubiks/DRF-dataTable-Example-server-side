@@ -1,5 +1,14 @@
 # DRF-dataTable-Example-server-side
 
+此版本為 Django>2.0，以及搭配 MySQL 5.7 的範例
+
+```text
+Django==2.2.1
+djangorestframework==3.9.3
+```
+
+如果使用 Django<2.0，請參考 [master branch](https://github.com/twtrubiks/DRF-dataTable-Example-server-side)
+
 DataTables Example (server-side) - Python Django REST framework
 
 * [Youtube Demo](https://youtu.be/E0Pf5Ci-vGw) - 建議看影片的 demo 說明
@@ -11,7 +20,7 @@ DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-f
 * 使用 [Django REST framework](http://www.django-rest-framework.org/) 建立API。
 * 搭配 [DataTables]( https://datatables.net/ ) 並且使用 [server-side]( https://datatables.net/manual/server-side ) 增加使用者體驗。
 * 搭配 Bootstrap 。
-* 搭配 SQLite ( 10萬筆模擬資料 )。
+* 搭配 MySQL 5.7。
 
 ## 安裝套件
 
@@ -19,7 +28,7 @@ DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-f
 
 安裝 [Django](https://github.com/django/django)
 
-這邊請注意，django<2.0 ( django 請安裝小於 2.0 的版本)
+這邊請注意，**Django==2.2.1**
 
 >pip install Django==1.11.20
 
@@ -33,6 +42,14 @@ DataTables (server-side) 搭配 [Django REST framework](http://www.django-rest-f
 
 ```cmd
 pip install -r requirements.txt
+```
+
+## MySQL
+
+使用 docker 建立 MySQL
+
+```cmd
+docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password123 -d mysql:5.7
 ```
 
 ## 說明
