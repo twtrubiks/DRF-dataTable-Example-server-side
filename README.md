@@ -1,5 +1,9 @@
 # DRF-dataTable-Example-server-side
 
+此版本為 django<2.0，以及搭配 SQLite 的範例，
+
+如果使用 Django>2.0，請參考 [django_2_and_mysql_5.7 branch](https://github.com/twtrubiks/DRF-dataTable-Example-server-side/tree/django_2_and_mysql_5.7)
+
 DataTables Example (server-side) - Python Django REST framework
 
 * [Youtube Demo](https://youtu.be/E0Pf5Ci-vGw) - 建議看影片的 demo 說明
