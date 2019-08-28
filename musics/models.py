@@ -50,7 +50,12 @@ def query_musics_by_args(**kwargs):
                                         Q(created__icontains=search_value))
 
     count = queryset.count()
-    queryset = queryset.order_by(order_column)[start:start + length]
+
+    if length == -1:
+        queryset = queryset.order_by(order_column)
+    else:
+        queryset = queryset.order_by(order_column)[start:start + length]
+
     return {
         'items': queryset,
         'count': count,

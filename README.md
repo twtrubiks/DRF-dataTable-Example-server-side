@@ -130,6 +130,12 @@ pip install mysqlclient
 
 ( 這個有可能安裝不起來，我自己最後是去找 mysqlclient-1.4.2-cp36-cp36m-win32.whl 安裝成功 )
 
+補充，如果是在 Linux 上，需要安裝 ( 否則 mysqlclient 會安裝失敗 )
+
+```cmd
+sudo apt install libmysqlclient-dev
+```
+
 [settings.py](https://github.com/twtrubiks/DRF-dataTable-Example-server-side/blob/master/drf_table_ex/settings.py#L84) 要改成
 
 ```python

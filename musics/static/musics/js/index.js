@@ -1,4 +1,5 @@
 let table = $('#datatables').DataTable({
+    "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
     "processing": true,
     "serverSide": true,
     "ajax": {
@@ -6,15 +7,15 @@ let table = $('#datatables').DataTable({
         "type": "GET"
     },
     "columns": [
-        {"data": "id"},
-        {"data": "song"},
-        {"data": "singer"},
-        {"data": "last_modify_date"},
-        {"data": "created"},
+        { "data": "id" },
+        { "data": "song" },
+        { "data": "singer" },
+        { "data": "last_modify_date" },
+        { "data": "created" },
         {
             "data": null,
             "defaultContent": '<button type="button" class="btn btn-info">Edit</button>' + '&nbsp;&nbsp' +
-            '<button type="button" class="btn btn-danger">Delete</button>'
+                '<button type="button" class="btn btn-danger">Delete</button>'
         }
     ]
 });
